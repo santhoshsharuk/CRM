@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRM Form - Google Sheets</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-r from-blue-500 to-indigo-600 min-h-screen flex items-center justify-center">
+
+    <div class="bg-white shadow-2xl rounded-2xl p-8 w-full max-w-2xl">
+        <h2 class="text-2xl font-bold text-gray-800 text-center mb-6">CRM Entry Form</h2>
+        
+        <form id="crmForm" class="space-y-6">
+            <div>
+                <label class="block text-gray-700 font-semibold">Business Name</label>
+                <input type="text" id="businessName" required 
+                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Enter business name">
+            </div>
+
+            <div>
+                <label class="block text-gray-700 font-semibold">Owner Name</label>
+                <input type="text" id="ownerName" required
+                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Enter owner name">
+            </div>
+
+            <div>
+                <label class="block text-gray-700 font-semibold">Contact Number</label>
+                <input type="tel" id="contactNumber" required
+                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Enter contact number">
+            </div>
+
+            <div class="flex items-center space-x-4">
+                <div class="flex-1">
+                    <label class="block text-gray-700 font-semibold">WhatsApp Number</label>
+                    <input type="tel" id="whatsappNumber"
+                        class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Enter WhatsApp number">
+                </div>
+                <div class="flex items-center">
+                    <input type="checkbox" id="sameAsContact" class="mr-2 w-5 h-5">
+                    <label class="text-gray-700">Same as Contact</label>
+                </div>
+            </div>
+
+            <div>
+                <label class="block text-gray-700 font-semibold">Place</label>
+                <input type="text" id="place" required
+                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Enter place">
+            </div>
+
+            <div>
+                <label class="block text-gray-700 font-semibold">Status</label>
+                <select id="status" required
+                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    <option value="New">New</option>
+                    <option value="In Progress">In Progress</option>
+                    <option value="Completed">Completed</option>
+                </select>
+            </div>
+
+            <button type="submit"
+                class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 rounded-lg transition-all duration-300">
+                Submit
+            </button>
+        </form>
+
+        <div id="responseMessage" class="text-center mt-4 font-semibold"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
