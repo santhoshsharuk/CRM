@@ -1,1 +1,2 @@
-# Netlify configuration file
+[build]
+  publish = "src"  # This tells Netlify to serve files from the "src" folder
