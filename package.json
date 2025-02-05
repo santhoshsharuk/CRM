@@ -1,5 +1,9 @@
 {
+  "name": "crm",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
   "dependencies": {
-    "mongodb": "^5.0.0"  // Add the latest version or compatible version
+    "mongodb": "^5.0.0"
   }
 }
